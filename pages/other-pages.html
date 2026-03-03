@@ -1,0 +1,209 @@
+<!-- ===== CONSULT (Owner) ===== -->
+<div class="page" id="page-consult">
+  <div class="page-container">
+    <div class="section-header">
+      <h2 class="section-title">Expert Consultation 👩‍⚕️</h2>
+      <button class="card-btn" onclick="openModal('askQuestion')">✏️ Ask a Question</button>
+    </div>
+    <div class="search-bar"><span>🔍</span><input type="text" placeholder="Search for an expert..."></div>
+    <div class="expert-card">
+      <div class="expert-avatar avatar-expert">👩‍⚕️</div>
+      <div class="expert-info" style="flex:1">
+        <h3>Dr. Lan Phuong</h3>
+        <div class="expert-spec">Feline Internal Medicine Specialist</div>
+        <div class="expert-bio">10 years of experience. Specializes in kidney, cardiac, and digestive diseases in cats. University lecturer and researcher.</div>
+        <div><span class="stars">★★★★★</span><span class="review-count">(128 reviews)</span></div>
+      </div>
+      <button class="book-btn">📅 Book Now</button>
+    </div>
+    <div class="expert-card">
+      <div class="expert-avatar avatar-owner">👨‍⚕️</div>
+      <div class="expert-info" style="flex:1">
+        <h3>Dr. Minh Tri</h3>
+        <div class="expert-spec">Nutrition &amp; Behavior Specialist</div>
+        <div class="expert-bio">8 years specializing in feline diet and behavior consulting. Graduated from Hanoi Veterinary University.</div>
+        <div><span class="stars">★★★★☆</span><span class="review-count">(94 reviews)</span></div>
+      </div>
+      <button class="book-btn">📅 Book Now</button>
+    </div>
+    <div class="expert-card">
+      <div class="expert-avatar avatar-seller">👩‍🔬</div>
+      <div class="expert-info" style="flex:1">
+        <h3>Dr. Thu Hien</h3>
+        <div class="expert-spec">Surgeon &amp; Orthopedic Specialist</div>
+        <div class="expert-bio">Specializes in surgery and injury treatment in cats. 12 years of experience at CatCare Veterinary Clinic.</div>
+        <div><span class="stars">★★★★★</span><span class="review-count">(203 reviews)</span></div>
+      </div>
+      <button class="book-btn">📅 Book Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FORUM ===== -->
+<div class="page" id="page-forum">
+  <div class="page-container">
+    <div class="section-header">
+      <h2 class="section-title">CareForCat Community 💬</h2>
+      <button class="card-btn" onclick="openModal('newPost')">✍️ New Post</button>
+    </div>
+    <div class="filter-bar" id="forumFilterBar">
+      <button class="filter-btn active" onclick="filterForum(this,'All')">All</button>
+      <button class="filter-btn" onclick="filterForum(this,'Q&amp;A')">Q&amp;A</button>
+      <button class="filter-btn" onclick="filterForum(this,'Stories')">Stories</button>
+      <button class="filter-btn" onclick="filterForum(this,'Expert Answers')">Expert Answers</button>
+    </div>
+    <div id="forumPosts">
+      <div class="post-card" data-category="Q&A">
+        <div class="post-header">
+          <div class="post-user-avatar avatar-owner">🧑</div>
+          <div><div class="post-user-name">Minh Anh</div><div class="post-time">2 hours ago · Q&amp;A</div></div>
+        </div>
+        <div class="post-title">My cat keeps sneezing constantly — could it be rhinitis?</div>
+        <div class="post-preview">Mochi has been sneezing a lot lately with clear nasal discharge. I checked his temperature and it's normal. Has anyone else experienced this before?</div>
+        <div class="post-footer">
+          <span class="post-action">❤️ 12 likes</span>
+          <span class="post-action">💬 8 comments</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+      </div>
+      <div class="post-card" data-category="Expert Answers">
+        <div class="post-header">
+          <div class="post-user-avatar avatar-expert">👩‍⚕️</div>
+          <div>
+            <div class="post-user-name">Dr. Lan Phuong <span style="font-size:11px;color:var(--soft-green);font-weight:600;">✓ Expert</span></div>
+            <div class="post-time">5 hours ago · Article</div>
+          </div>
+        </div>
+        <div class="post-title">5 Signs Your Cat Needs to See a Vet Immediately</div>
+        <div class="post-preview">As a cat owner, recognizing danger signs early can save your pet's life. Here are the 5 most critical warning signs to watch out for...</div>
+        <div class="post-footer">
+          <span class="post-action">❤️ 87 likes</span>
+          <span class="post-action">💬 34 comments</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+      </div>
+      <div class="post-card" data-category="Stories">
+        <div class="post-header">
+          <div class="post-user-avatar avatar-seller">🛍️</div>
+          <div>
+            <div class="post-user-name">Thanh Ha Shop <span style="font-size:11px;color:var(--terracotta);font-weight:600;">🏪 Store</span></div>
+            <div class="post-time">1 day ago · Review</div>
+          </div>
+        </div>
+        <div class="post-title">Royal Canin vs Hill's Science Diet — Which Is Better for Indoor Cats?</div>
+        <div class="post-preview">After 3 months of testing with multiple customers, here is a detailed comparison of the two most popular cat food brands on the market...</div>
+        <div class="post-footer">
+          <span class="post-action">❤️ 45 likes</span>
+          <span class="post-action">💬 22 comments</span>
+          <span class="post-action">🔖 Save</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MANAGE PRODUCTS (Seller) ===== -->
+<div class="page" id="page-manage-products">
+  <div class="page-container">
+    <div class="section-header">
+      <h2 class="section-title">Product Management 📦</h2>
+      <button class="card-btn" onclick="openModal('addProduct')">+ Add Product</button>
+    </div>
+    <div class="manage-tabs">
+      <button class="manage-tab active" onclick="filterProductTab(this,'all')">Active (12)</button>
+      <button class="manage-tab" onclick="filterProductTab(this,'pending')">Pending Review (3)</button>
+      <button class="manage-tab" onclick="filterProductTab(this,'outofstock')">Out of Stock (2)</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Sold</th><th>Status</th><th></th></tr></thead>
+        <tbody id="productTableBody">
+          <tr data-status="all"><td><strong>Royal Canin Indoor 2kg</strong></td><td>Food</td><td>$13.99</td><td>45</td><td>128</td><td><span class="status-pill status-active">Active</span></td><td><button class="card-btn">Edit</button></td></tr>
+          <tr data-status="all"><td><strong>Smart Litter Box</strong></td><td>Hygiene</td><td>$8.99</td><td>12</td><td>67</td><td><span class="status-pill status-active">Active</span></td><td><button class="card-btn">Edit</button></td></tr>
+          <tr data-status="outofstock"><td><strong>Premium Toy Set</strong></td><td>Toys</td><td>$6.99</td><td>0</td><td>89</td><td><span class="status-pill status-pending">Out of Stock</span></td><td><button class="card-btn">Edit</button></td></tr>
+          <tr data-status="pending"><td><strong>Multi-Vitamin Supplement</strong></td><td>Medicine</td><td>$9.99</td><td>30</td><td>54</td><td><span class="status-pill status-pending">Pending Review</span></td><td><button class="card-btn">Edit</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MANAGE ORDERS (Seller) ===== -->
+<div class="page" id="page-manage-orders">
+  <div class="page-container">
+    <div class="section-header"><h2 class="section-title">Order Management 🧾</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Order ID</th><th>Customer</th><th>Product</th><th>Total</th><th>Date</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>#ORD-1024</td><td>Minh Anh</td><td>Royal Canin × 2</td><td>$27.98</td><td>Mar 3, 2026</td><td><span class="status-pill status-pending">Processing</span></td></tr>
+          <tr><td>#ORD-1023</td><td>Huu Duc</td><td>Litter Box × 1</td><td>$8.99</td><td>Mar 2, 2026</td><td><span class="status-pill status-done">Delivered</span></td></tr>
+          <tr><td>#ORD-1022</td><td>Thao Nguyen</td><td>Vitamins × 3</td><td>$29.97</td><td>Mar 1, 2026</td><td><span class="status-pill status-active">Shipped</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SCHEDULE (Expert) ===== -->
+<div class="page" id="page-schedule">
+  <div class="page-container">
+    <div class="section-header">
+      <h2 class="section-title">My Consultation Schedule 📅</h2>
+      <button class="card-btn" onclick="openModal('setSchedule')">+ Add Availability</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Time</th><th>Patient</th><th>Cat Name</th><th>Issue</th><th>Type</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Today, 2:00 PM</td><td>Minh Anh</td><td>Mochi</td><td>Sneezing, runny nose</td><td>🎥 Online</td><td><span class="status-pill status-active">Upcoming</span></td></tr>
+          <tr><td>Today, 4:30 PM</td><td>Huu Duc</td><td>Cream</td><td>Routine health checkup</td><td>🏥 In-person</td><td><span class="status-pill status-active">Upcoming</span></td></tr>
+          <tr><td>Mar 4, 9:00 AM</td><td>Thu Phuong</td><td>Cloud</td><td>Diet consultation</td><td>🎥 Online</td><td><span class="status-pill status-pending">Awaiting Confirm</span></td></tr>
+          <tr><td>Mar 2, 10:00 AM</td><td>Thanh Lam</td><td>Espresso</td><td>Skin inflammation treatment</td><td>🏥 In-person</td><td><span class="status-pill status-done">Completed</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ARTICLES (Expert) ===== -->
+<div class="page" id="page-articles">
+  <div class="page-container">
+    <div class="section-header">
+      <h2 class="section-title">My Articles ✍️</h2>
+      <button class="card-btn" onclick="openModal('newArticle')">+ Write New Article</button>
+    </div>
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-img card-img-blue">🔬</div>
+        <div class="card-body"><span class="card-tag tag-health">Health</span><div class="card-title">Chronic Kidney Disease in Middle-Aged Cats</div><div class="card-desc">Early detection and effective treatment protocols for cats aged 7 and above...</div></div>
+        <div class="card-footer"><span class="card-author">234 reads</span><button class="card-btn">Edit</button></div>
+      </div>
+      <div class="card">
+        <div class="card-img card-img-green">🥗</div>
+        <div class="card-body"><span class="card-tag tag-food">Nutrition</span><div class="card-title">A Balanced Diet for Indoor Cats</div><div class="card-desc">A science-based guide to meal planning that prevents obesity and nutritional deficiencies...</div></div>
+        <div class="card-footer"><span class="card-author">178 reads</span><button class="card-btn">Edit</button></div>
+      </div>
+      <div class="card">
+        <div class="card-img card-img-rose">💊</div>
+        <div class="card-body"><span class="card-tag tag-care">Treatment</span><div class="card-title">How to Give Your Cat Medicine the Right Way</div><div class="card-desc">Techniques and tips to make medicating your cat safe and stress-free...</div></div>
+        <div class="card-footer"><span class="card-author">412 reads</span><button class="card-btn">Edit</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== PROFILE (All roles) ===== -->
+<div class="page" id="page-profile">
+  <div class="page-container">
+    <div class="profile-header">
+      <div class="profile-avatar-big" id="profileAvatarBig"></div>
+      <div class="profile-info">
+        <h2 id="profileName"></h2>
+        <p id="profileEmail"></p>
+        <div class="profile-role-badge" id="profileRoleBadge"></div>
+      </div>
+    </div>
+    <div class="info-grid" id="profileInfoGrid"></div>
+  </div>
+</div>
